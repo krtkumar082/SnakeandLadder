@@ -7,5 +7,14 @@ public class Game {
 	int pos=0;
 	Random R=new Random();
 	int dienum=R.nextInt(6)+1;
+	int value=R.nextInt(10) % 3;
+	switch(value) {
+	case 0 : break;
+	case 1 : pos+=dienum;
+	           break;
+	case 2 : pos-=dienum;
+	         break;
+	}
+	
 }
 }
