@@ -5,7 +5,9 @@ public class Game {
 	System.out.println("Welcome to Snake and Ladder Game");
 	int num=1;
 	int pos=0;
+	
 	Random R=new Random();
+	while(pos<100) {
 	int dienum=R.nextInt(6)+1;
 	int value=R.nextInt(10) % 3;
 	switch(value) {
@@ -13,8 +15,13 @@ public class Game {
 	case 1 : pos+=dienum;
 	           break;
 	case 2 : pos-=dienum;
+	         if(pos<0)
+	        	 pos=0;
 	         break;
 	}
 	
+}
+	if(pos>=100)
+		System.out.println("winner");
 }
 }
