@@ -12,7 +12,10 @@ public class Game {
 	int value=R.nextInt(10) % 3;
 	switch(value) {
 	case 0 : break;
-	case 1 : pos+=dienum;
+	case 1 : if(pos+dienum >100)
+	            pos=pos;
+           	else
+	           pos+=dienum;	
 	           break;
 	case 2 : pos-=dienum;
 	         if(pos<0)
@@ -21,7 +24,8 @@ public class Game {
 	}
 	
 }
-	if(pos>=100)
+	if(pos==100)
 		System.out.println("winner");
+	
 }
 }
